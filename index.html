@@ -50,6 +50,7 @@
             flex-direction: row;
             justify-content: start;
             gap: 12px;
+            margin-bottom: 20px;
         }
 
         .input-group input {
@@ -68,6 +69,12 @@
             <input type="number" id="numero2" placeholder="Digite o segundo número">
             <button class="button" onclick="somarNumeros()">Somar</button>
         </div>
+
+        <div class="input-group">
+            <input type="number" id="numero3" placeholder="Digite o primeiro número">
+            <input type="number" id="numero4" placeholder="Digite o segundo número">
+            <button class="button" onclick="subtrairNumeros()">Diminuir</button>
+        </div>
     </div>
 
     <script>
@@ -77,6 +84,14 @@
 
             const soma = parseFloat(numero1) + parseFloat(numero2);
             alert('A soma é: ' + soma);
+        }
+
+        function subtrairNumeros() {
+            const numero3 = document.getElementById('numero3').value;
+            const numero4 = document.getElementById('numero4').value;
+
+            const subtracao = parseFloat(numero3) - parseFloat(numero4);
+            alert('A subtração é: ' + subtracao);
         }
     </script>
 </body>
